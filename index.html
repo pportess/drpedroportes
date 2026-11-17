@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr. Pedro Portes · Cirurgião-Dentista em Curitiba</title>
+<meta name="description" content="Dr. Pedro Portes, cirurgião-dentista, CRO-PR 39911. Clínica geral, estética e prótese no Centro Cívico, em Curitiba.">
+<meta name="theme-color" content="#ece3d6">
+<link rel="icon" href="img/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Esboço 7 (17/11/2026): vibe do institutokimura.com.br. Títulos na fonte do logo (Times), texto em DM Sans. */
+:root {
+  --bege: #ece3d6; --bege-2: #f6f1ea; --cinza: #e4ddd3; --escuro: #141110; --escuro-2: #1d1917;
+  --texto: #1c1714; --suave: #6b625b; --bordo: #7a1f2b; --bordo-esc: #5e1520; --champ: #d2b48f; --branco: #fff;
+  --sans: "DM Sans", system-ui, sans-serif; --serif: "Times New Roman", Times, "Tinos", serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { margin: 0; font: 400 16px/1.65 var(--sans); color: var(--texto); background: var(--bege-2); -webkit-font-smoothing: antialiased; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; }
+/* Sem seleção azul ao tocar ou arrastar; só o número e o e-mail do rodapé continuam copiáveis */
+footer .contato-item span { -webkit-user-select: text; user-select: text; }
+img, video { -webkit-user-drag: none; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em; line-height: 1.1; }
+p { margin: 0; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; text-align: left; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+/* Topo */
+.topo { position: sticky; top: 0; z-index: 50; background: var(--bege); }
+.topo .wrap { display: flex; align-items: center; justify-content: space-between; height: 92px; }
+.marca { display: flex; align-items: center; gap: 14px; }
+.marca img { width: 44px; height: 44px; }
+.marca b { font: 400 1.95rem/1 var(--serif); letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
+.topo nav { display: flex; gap: 34px; font-size: .95rem; }
+.topo nav a { padding-bottom: 2px; border-bottom: 1px solid transparent; transition: border-color .2s; }
+.topo nav a:hover { border-color: var(--texto); }
+.btn-contorno { border: 1px solid #b9ab99; border-radius: 10px; padding: 11px 22px; font-size: .92rem; font-weight: 500; transition: all .25s; }
+.btn-contorno:hover { background: var(--bordo); border-color: var(--bordo); color: var(--branco); }
+.acoes-topo { display: flex; align-items: center; gap: 22px; }
+.insta { display: flex; align-items: center; gap: 8px; font-size: .92rem; transition: color .2s; }
+.insta:hover { color: var(--bordo); }
+
+/* Abertura */
+.abertura { position: relative; height: min(calc(100vh - 92px), 820px); min-height: 600px; display: flex; align-items: center; overflow: hidden; background: var(--escuro); color: var(--branco); }
+.abertura > img { position: absolute; right: 0; top: 0; width: 60%; height: 100%; object-fit: cover; object-position: 50% 15%; }
+.abertura::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--escuro) 40%, rgba(20, 17, 16, .55) 62%, rgba(20, 17, 16, .25)); }
+.abertura .wrap { position: relative; z-index: 1; width: 100%; padding-top: 80px; padding-bottom: 80px; }
+.abertura h1 { font-size: clamp(3rem, 5.6vw, 5.2rem); max-width: 640px; line-height: 1.04; }
+.abertura h1 em { color: var(--champ); }
+.abertura p { margin: 24px 0 38px; font-size: 1.2rem; color: rgba(255, 255, 255, .82); max-width: 480px; }
+.btn-branco { display: inline-block; border: 1px solid rgba(255, 255, 255, .85); border-radius: 10px; padding: 15px 30px; font-weight: 500; letter-spacing: .03em; text-transform: uppercase; font-size: .9rem; transition: all .25s; }
+.btn-branco:hover { background: var(--branco); border-color: var(--branco); color: var(--escuro); }
+.abertura small { display: block; margin-top: 46px; font-size: .82rem; color: rgba(255, 255, 255, .55); letter-spacing: .04em; }
+
+/* Blocos escuros alternados */
+.escuro { background: var(--escuro); color: var(--branco); padding: 110px 0; }
+.bloco { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.bloco + .bloco { margin-top: 110px; }
+.bloco.inverte .midia { order: 2; }
+.midia { aspect-ratio: 4 / 3.3; border-radius: 4px; overflow: hidden; background: linear-gradient(140deg, #2b2320, #171312); position: relative; display: flex; align-items: flex-end; padding: 22px; }
+.midia img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; }
+.midia img.foto-consultorio { object-position: 50% 52%; }
+.midia img.foto-consultorio-2 { object-position: 50% 62%; filter: saturate(.8) contrast(1.04) brightness(.94); }
+/* Comparador: arrasta a linha para ver o diagnóstico e a conclusão */
+.comparar { position: relative; aspect-ratio: 2 / 1; border-radius: 4px; overflow: hidden; background: #000; user-select: none; touch-action: pan-y; cursor: ew-resize; }
+.comparar.mais-alto { aspect-ratio: 4 / 3; }
+.comparar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.comparar .antes { clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0); }
+.comparar .linha { position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 1px; background: rgba(255, 255, 255, .55); pointer-events: none; }
+.comparar .puxador { position: absolute; top: 50%; left: 0; width: 46px; height: 26px; transform: translate(-50%, -50%); border-radius: 13px; background: rgba(20, 17, 16, .45); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, .25); color: #fff; display: grid; place-items: center; }
+.comparar .puxador svg { display: block; width: 22px; height: 10px; }
+.comparar .rotulo { position: absolute; top: 12px; font: 400 1.05rem/1 "Times New Roman", Times, "Tinos", serif; letter-spacing: .02em; color: rgba(255, 255, 255, .95); text-shadow: 0 1px 6px rgba(0, 0, 0, .6); pointer-events: none; }
+.comparar .rotulo.esq { left: 16px; } .comparar .rotulo.dir { right: 16px; }
+.bloco.inverte > .lado-midia { order: 2; }
+.midia.video { aspect-ratio: 4 / 5; padding: 0; }
+.midia video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.comparar input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+.legenda { margin-top: 8px; font-size: .74rem; color: rgba(255, 255, 255, .8); }
+.midia .reserva { position: relative; font-size: .8rem; color: rgba(255, 255, 255, .45); border: 1px dashed rgba(255, 255, 255, .2); padding: 8px 12px; border-radius: 6px; }
+.bloco h2 { font-size: clamp(2.2rem, 3.4vw, 3rem); }
+.bloco p { margin-top: 20px; color: rgba(255, 255, 255, .78); font-size: 1.05rem; }
+.etiquetas { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 24px; }
+.etiquetas a { color: var(--champ); font-size: .98rem; }
+.etiquetas a:hover { text-decoration: underline; }
+
+/* Tratamentos */
+.claro { padding: 110px 0; }
+.claro > .wrap > h2 { font-size: clamp(2.2rem, 3.4vw, 3rem); margin-bottom: 44px; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.card { background: var(--cinza); border-radius: 12px; padding: 26px 24px 22px; display: flex; flex-direction: column; transition: transform .3s, box-shadow .3s, background .3s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 18px 36px -24px rgba(28, 23, 20, .45); background: var(--branco); }
+.card h3 { font-size: 1.45rem; }
+.card p { margin: 12px 0 22px; font-size: .94rem; color: var(--suave); flex: 1; }
+.card span { align-self: flex-end; font-size: .92rem; font-weight: 500; color: var(--suave); }
+.card:hover span { color: var(--bordo); }
+/* modo aberto: fica só o card escolhido e um painel grande ao lado */
+.tratamentos-area { display: grid; grid-template-columns: 1fr; gap: 18px; overflow-anchor: none; }
+.tratamentos-area.aberto { grid-template-columns: 300px 1fr; align-items: start; }
+.tratamentos-area.aberto .cards { grid-template-columns: 1fr; }
+.tratamentos-area.aberto .card { display: none; }
+.tratamentos-area.aberto .card.ativo { display: flex; background: var(--branco); transform: none; box-shadow: 0 18px 36px -26px rgba(28, 23, 20, .4); }
+.tratamentos-area.aberto .card.ativo span.saiba { display: none; }
+.card .voltar-card { display: none; }
+.tratamentos-area.aberto .card.ativo .voltar-card { display: inline-block; align-self: flex-start; margin-top: 4px; font: 500 .9rem/1.4 var(--sans); color: var(--bordo); }
+.tratamentos-area.aberto .card.ativo:hover .voltar-card { text-decoration: underline; }
+.detalhe { display: none; background: var(--branco); border-radius: 12px; padding: 40px 44px; box-shadow: 0 18px 36px -26px rgba(28, 23, 20, .4); animation: entra .35s ease; }
+.tratamentos-area.aberto .detalhe { display: block; }
+@keyframes entra { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.detalhe h3 { font-size: 2.3rem; }
+.detalhe .intro { margin-top: 14px; color: var(--suave); font-size: 1.05rem; max-width: 620px; }
+.detalhe ol { list-style: none; counter-reset: passo; margin: 30px 0 0; padding: 0; border-top: 1px solid var(--cinza); }
+.detalhe li { counter-increment: passo; display: grid; grid-template-columns: 54px 1fr; gap: 10px; padding: 18px 0; border-bottom: 1px solid var(--cinza); }
+.detalhe li::before { content: counter(passo, decimal-leading-zero); font: italic 400 1.4rem/1.2 var(--serif); color: var(--bordo); }
+.detalhe li b { display: block; font-weight: 600; margin-bottom: 2px; }
+.detalhe li span { color: var(--suave); font-size: .96rem; }
+.detalhe .acoes { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; margin-top: 30px; }
+.btn-escuro { display: inline-block; background: var(--escuro); color: var(--branco); border-radius: 10px; padding: 15px 28px; font-weight: 500; font-size: .9rem; letter-spacing: .03em; text-transform: uppercase; transition: background .25s; }
+.btn-escuro:hover { background: var(--bordo); }
+.voltar { font-weight: 500; color: var(--suave); border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+.voltar:hover { color: var(--bordo); }
+
+/* Sobre */
+.sobre { background: var(--bege); padding: 110px 0; }
+.sobre .bloco p { color: var(--suave); font-size: 1.05rem; }
+.sobre .bloco p.lead { color: var(--texto); font-size: 1.2rem; line-height: 1.6; }
+.sobre .midia { aspect-ratio: 4 / 4.6; background: var(--escuro); }
+.atuacao { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.atuacao span { border: 1px solid #b9ab99; border-radius: 999px; padding: 8px 18px; font-size: .92rem; font-weight: 500; transition: background .25s, border-color .25s, color .25s; }
+.atuacao span:hover { background: var(--bordo); border-color: var(--bordo); color: var(--branco); }
+
+/* Chamada */
+.chamada { background: var(--escuro); color: var(--branco); text-align: center; padding: 100px 0; }
+.chamada h2 { font-size: clamp(2.4rem, 4vw, 3.4rem); }
+.chamada p { margin: 16px auto 34px; color: rgba(255, 255, 255, .72); max-width: 520px; }
+
+/* Rodapé */
+footer { background: var(--escuro-2); color: rgba(255, 255, 255, .7); padding: 70px 0 34px; font-size: .94rem; }
+footer .l1 { display: grid; grid-template-columns: 1.4fr 1fr .8fr 1fr; gap: 36px; padding-bottom: 44px; border-bottom: 1px solid rgba(255, 255, 255, .1); }
+footer .marca { color: var(--branco); margin-bottom: 16px; }
+footer .marca img { width: 50px; height: 50px; }
+footer .marca b { font-size: 2.1rem; }
+footer h4 { margin: 0 0 12px; color: var(--branco); font-size: .95rem; font-weight: 600; }
+footer .l1 a { display: block; padding: 2px 0; }
+footer .l1 a.marca { display: flex; }
+footer .l1 a:hover { color: var(--branco); }
+footer .l1 a.contato-item { display: flex; align-items: center; gap: 10px; padding: 4px 0; }
+.contato-item svg { width: 17px; height: 17px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; opacity: .85; }
+footer .l2 { padding-top: 24px; font-size: .82rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+.barra { display: none; }
+@media (max-width: 900px) {
+  .wrap { padding: 0 20px; }
+  .topo .wrap { height: 72px; }
+  .topo nav, .topo .btn-contorno { display: none; }
+  .insta span { display: none; }
+  .insta svg { width: 24px; height: 24px; }
+  .marca img { width: 36px; height: 36px; }
+  .marca b { font-size: 1.55rem; }
+  .abertura { height: auto; min-height: 0; flex-direction: column; align-items: stretch; }
+  .abertura > img { position: relative; width: 100%; height: 420px; }
+  .abertura::after { background: linear-gradient(180deg, transparent 180px, var(--escuro) 420px); }
+  .abertura .wrap { margin-top: -90px; padding-top: 0; padding-bottom: 64px; }
+  .abertura h1 { font-size: 2.9rem; }
+  .abertura p { font-size: 1.05rem; }
+  .escuro, .claro, .sobre { padding: 76px 0; }
+  .bloco { grid-template-columns: 1fr; gap: 28px; }
+  .bloco.inverte .midia, .bloco.inverte > .lado-midia { order: 0; }
+  .bloco + .bloco { margin-top: 72px; }
+  .cards { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .card { padding: 20px 18px; }
+  .tratamentos-area.aberto { grid-template-columns: 240px 1fr; }
+  .detalhe { padding: 28px 22px; }
+  .detalhe h3 { font-size: 1.9rem; }
+  footer .l1 { grid-template-columns: 1fr 1fr; }
+  footer { padding-bottom: 100px; }
+  .barra { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--bege); border-top: 1px solid #d6cab9; padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); gap: 10px; }
+  .barra a { flex: 1; text-align: center; padding: 14px 8px; border-radius: 10px; font-weight: 500; font-size: .95rem; border: 1px solid #b9ab99; }
+  .barra a.cheio { flex: 2; background: var(--bordo); color: var(--branco); border-color: var(--bordo); }
+}
+@media (max-width: 640px) { .tratamentos-area.aberto { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .cards { grid-template-columns: 1fr; } footer .l1 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio"><img src="img/logo-pp.svg" alt=""><b>Pedro Portes</b></a>
+    <nav aria-label="Seções">
+      <a href="#inicio">Início</a>
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="acoes-topo">
+      <a class="insta" href="https://www.instagram.com/drpedroportes/" target="_blank" rel="noopener" aria-label="Instagram do Dr. Pedro (@drpedroportes)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg><span>@drpedroportes</span></a>
+      <a class="btn-contorno wpp" href="#" data-msg="Olá, Dr. Pedro! Vim pelo site e gostaria de agendar uma avaliação.">Agende sua avaliação</a>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="abertura">
+    <img src="img/pedro.jpg" alt="Dr. Pedro Portes, cirurgião-dentista" width="1000" height="1223">
+    <div class="wrap">
+      <h1>Odontologia com ciência, precisão e <em>arte</em>.</h1>
+      <p>Atendimento individualizado em Curitiba.</p>
+      <a class="btn-branco wpp" href="#" data-msg="Olá, Dr. Pedro! Vim pelo site e gostaria de agendar uma avaliação.">Quero uma avaliação</a>
+      <small>Dr. Pedro Portes · Cirurgião-Dentista · CRO-PR 39911</small>
+    </div>
+  </section>
+
+  <section class="escuro">
+    <div class="wrap">
+      <div class="bloco">
+        <div class="midia"><img class="foto-consultorio" src="img/consultorio.jpg" alt="Consultório odontológico com vista para a cidade" loading="lazy"></div>
+        <div>
+          <h2>Clínica geral</h2>
+          <p>Cuidado completo: avaliação detalhada, limpeza, restaurações e revisões. Cada consulta começa com uma conversa e termina com um plano claro, explicado etapa por etapa.</p>
+          <div class="etiquetas"><a href="#tratamentos" data-abre="avaliacao">Avaliação</a><a href="#tratamentos" data-abre="profilaxia">Profilaxia</a><a href="#tratamentos" data-abre="resina">Restaurações em resina</a></div>
+        </div>
+      </div>
+      <div class="bloco inverte">
+        <div class="lado-midia">
+          <div class="comparar mais-alto" style="--pos:66%">
+            <img src="img/estetica-2.jpg" alt="Depois do tratamento" loading="lazy">
+            <img class="antes" src="img/estetica-1.jpg" alt="Antes do tratamento" loading="lazy">
+            <span class="linha"><span class="puxador"><svg viewBox="0 0 22 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 1 2 5l4 4M16 1l4 4-4 4"/></svg></span></span>
+            <span class="rotulo esq">Antes</span><span class="rotulo dir">Depois</span>
+            <input type="range" min="0" max="100" value="66" aria-label="Arraste para comparar antes e depois">
+          </div>
+          <p class="legenda">Arraste a seta para comparar</p>
+        </div>
+        <div>
+          <h2>Estética</h2>
+          <p>Restaurações e resinas feitas com técnica biomimética, que reproduz a estrutura natural do dente. Forma, cor e textura planejadas para um resultado que não pareça "feito", e sim seu.</p>
+          <div class="etiquetas"><a href="#tratamentos" data-abre="estetica">Estética em resina</a><a href="#tratamentos" data-abre="resina">Restaurações</a></div>
+        </div>
+      </div>
+      <div class="bloco">
+        <div>
+          <div class="comparar" style="--pos:50%">
+            <img src="img/protese-2.jpg" alt="Depois do tratamento" loading="lazy">
+            <img class="antes" src="img/protese-1.jpg" alt="Antes do tratamento" loading="lazy">
+            <span class="linha"><span class="puxador"><svg viewBox="0 0 22 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 1 2 5l4 4M16 1l4 4-4 4"/></svg></span></span>
+            <span class="rotulo esq">Antes</span><span class="rotulo dir">Depois</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois">
+          </div>
+          <p class="legenda">Arraste a seta para comparar</p>
+        </div>
+        <div>
+          <h2>Prótese e reabilitação</h2>
+          <p>Planejamento para devolver forma, função e conforto a dentes muito destruídos ou ausentes. Cada etapa é pensada para que o resultado seja duradouro e se integre ao seu sorriso.</p>
+          <div class="etiquetas"><a href="#tratamentos" data-abre="protese">Coroas e próteses</a></div>
+        </div>
+      </div>
+      <div class="bloco inverte">
+        <div class="midia video"><video src="img/atendimento.mp4" poster="img/atendimento-capa.jpg" autoplay muted loop playsinline preload="metadata" disablepictureinpicture aria-label="Dr. Pedro em atendimento"></video></div>
+        <div>
+          <h2>Atendimento integrado</h2>
+          <p>Seu sorriso é visto por inteiro, e não dente por dente. Quando o caso pede, o diagnóstico e o planejamento são feitos em conjunto com dentistas de outras áreas e com profissionais da saúde, como médicos, fisioterapeutas e fonoaudiólogos. Assim, o tratamento olha para a causa, e não só para o sintoma, do primeiro exame ao último retorno.</p>
+          <div class="etiquetas"><a href="#tratamentos" data-abre="avaliacao">Começar pela avaliação</a><a href="#tratamentos" data-abre="bruxismo">Bruxismo e dor na articulação</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="claro" id="tratamentos">
+    <div class="wrap">
+      <h2>Tratamentos</h2>
+      <div class="tratamentos-area" id="area">
+        <div class="cards" id="cards"></div>
+        <div class="detalhe" id="detalhe" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="wrap">
+      <div class="bloco">
+        <div class="midia"><img src="img/pedro-sobre.jpg" alt="Dr. Pedro Portes em atendimento" width="1000" height="1150" style="object-position:50% 50%"></div>
+        <div>
+          <h2>Sobre o Dr. Pedro</h2>
+          <p class="lead" style="margin-top:22px">Diagnóstico preciso antes de qualquer procedimento. Esse é o princípio que guia cada plano de tratamento: técnica apurada, decisões baseadas em evidência científica e olhar estético em cada detalhe.</p>
+          <p style="margin-top:18px">Formado em Odontologia pela Universidade Positivo, o Dr. Pedro Portes cursa especialização em Prótese Dentária. Realizou aperfeiçoamento em Cirurgia Oral Menor e em Endodontia, além de cursos de resinas compostas em dentes anteriores.</p>
+          <div class="atuacao"><span>Clínica geral</span><span>Estética</span><span>Prótese</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chamada">
+    <div class="wrap">
+      <h2>Agende sua consulta</h2>
+      <p>Pelo WhatsApp você tira qualquer dúvida e combina o melhor horário.</p>
+      <a class="btn-branco wpp" href="#" data-msg="Olá, Dr. Pedro! Vim pelo site e gostaria de agendar uma avaliação.">Quero uma avaliação</a>
+    </div>
+  </section>
+</main>
+
+<footer id="contato">
+  <div class="wrap">
+    <div class="l1">
+      <div><a class="marca" href="#inicio"><img src="img/logo-pp-creme.svg" alt=""><b>Pedro Portes</b></a><p>Clínica geral · Estética · Prótese<br>Cirurgião-Dentista · CRO-PR 39911</p></div>
+      <div><h4>Endereço</h4><p>Av. Cândido de Abreu, 427, sala 501A<br>Centro Cívico, Curitiba – PR</p><a href="https://www.google.com/maps/search/?api=1&query=Av.+C%C3%A2ndido+de+Abreu%2C+427+-+Centro+C%C3%ADvico%2C+Curitiba+-+PR" target="_blank" rel="noopener">Ver no mapa →</a></div>
+      <div><h4>Horário</h4><p>Com hora marcada</p></div>
+      <div><h4>Contato</h4><a class="contato-item wpp" href="#" data-msg="Olá, Dr. Pedro! Vim pelo site." aria-label="WhatsApp (41) 99522-9633"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.6c0 3.3 3 6.4 6.4 6.4l1.2-1.4-1.9-1-1 .9c-1.1-.4-2.3-1.6-2.7-2.7l.9-1-1-1.9z"/></svg><span class="tel-texto">(41) 99522-9633</span></a><a class="contato-item" href="mailto:drpedroportes@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><span>drpedroportes@gmail.com</span></a><a class="contato-item" href="https://www.instagram.com/drpedroportes/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor" stroke="none"/></svg><span>@drpedroportes</span></a></div>
+    </div>
+    <div class="l2"><span>© 2026 Dr. Pedro Portes · Cirurgião-Dentista · CRO-PR 39911</span><span>Curitiba · PR</span></div>
+  </div>
+</footer>
+
+<div class="barra">
+  <a class="tel" href="#">Ligar</a>
+  <a class="cheio wpp" href="#" data-msg="Olá, Dr. Pedro! Vim pelo site e gostaria de agendar uma avaliação.">Agendar avaliação</a>
+</div>
+
+<script>
+// ⚠️ NÚMERO DO WHATSAPP BUSINESS: trocar aqui (só números, com 55 + DDD). Todos os botões do site usam este número.
+var WHATS = '5541995229633'; // WhatsApp Business do consultório (passado pelo Pedro em 17/11/2026)
+var TEL_TEXTO = '(41) 99522-9633';
+
+function linkWhats(msg) { return 'https://wa.me/' + WHATS + '?text=' + encodeURIComponent(msg); }
+document.querySelectorAll('.wpp').forEach(function (a) { a.href = linkWhats(a.dataset.msg || 'Olá, Dr. Pedro!'); a.target = '_blank'; a.rel = 'noopener'; });
+document.querySelectorAll('.tel').forEach(function (a) { a.href = 'tel:+' + WHATS; });
+document.querySelectorAll('.tel-texto').forEach(function (a) { a.textContent = TEL_TEXTO; });
+
+// Comparador: o controle invisível move a linha
+document.querySelectorAll('.comparar').forEach(function (box) {
+  var r = box.querySelector('input');
+  r.addEventListener('input', function () { box.style.setProperty('--pos', r.value + '%'); });
+});
+
+// Tratamentos: card resumido + painel grande ao clicar em "Saiba mais"
+var TRAT = [
+  { id: 'avaliacao', t: 'Avaliação', r: 'Conversa, exame clínico detalhado e um plano de tratamento por etapas.',
+    i: 'A avaliação é o ponto de partida de qualquer tratamento. É nela que entendo o que você sente, examino com calma e defino, junto com você, o melhor caminho.',
+    p: [['Anamnese', 'Uma conversa detalhada sobre suas queixas, seu histórico de saúde e seus hábitos. É ela que ajuda a investigar a causa, e não só o sintoma.'], ['Exame clínico', 'Dentes, gengiva, mordida e articulação, avaliados em detalhe. Fotos e exames de imagem, quando necessários.'], ['Diagnóstico', 'Explico o que encontrei, com clareza e sem termos difíceis.'], ['Plano por etapas', 'As opções de tratamento, a ordem de cada etapa e os prazos, para você decidir com tranquilidade.']] },
+  { id: 'profilaxia', t: 'Profilaxia', r: 'Limpeza, orientação de higiene e revisões periódicas para manter a saúde bucal.',
+    i: 'A limpeza profissional remove a placa e o tártaro que a escovação não alcança, e é a base para que qualquer tratamento dure.',
+    p: [['Avaliação da gengiva', 'Verificação de sangramento, tártaro e pontos de atenção.'], ['Limpeza', 'Remoção de placa e tártaro e polimento dos dentes.'], ['Orientação', 'Escovação, fio dental e cuidados certos para o seu caso.'], ['Revisões', 'Retornos periódicos para manter a saúde bucal em dia.']] },
+  { id: 'resina', t: 'Restaurações em resina', r: 'Tratamento de cáries e fraturas com técnica biomimética, que imita a estrutura natural do dente.',
+    i: 'A odontologia biomimética busca reproduzir o comportamento do dente natural, preservando o máximo de estrutura sadia. O resultado é uma restauração resistente e com aparência natural.',
+    p: [['Diagnóstico', 'Identificação da cárie, fratura ou restauração antiga a ser trocada.'], ['Preservação', 'Remoção apenas do necessário, mantendo o máximo do seu dente.'], ['Reconstrução em camadas', 'A resina é aplicada em camadas, reproduzindo a cor e a translucidez do dente.'], ['Acabamento', 'Ajuste da mordida e polimento, para conforto e brilho natural.']] },
+  { id: 'estetica', t: 'Estética em resina', r: 'Ajustes de forma, cor e proporção dos dentes da frente, com resina composta.',
+    i: 'Pequenas mudanças de forma e cor podem harmonizar o sorriso. O planejamento estético considera o seu rosto, os seus lábios e o seu jeito de sorrir.',
+    p: [['Avaliação estética', 'Análise do sorriso, com fotos, para entender o que pode ser melhorado.'], ['Planejamento', 'Definição de forma, cor e proporção junto com você.'], ['Execução', 'Aplicação da resina em camadas, com técnica de estratificação.'], ['Acompanhamento', 'Revisões e polimento para manter o resultado.']] },
+  { id: 'sensibilidade', t: 'Dentes sensíveis ou gastos', r: 'Sente dor com gelado ou percebe os dentes mais curtos? Descobrimos juntos a causa.',
+    i: 'Sensibilidade e desgaste costumam ter uma causa por trás, como alimentos ácidos, refluxo, escovação com força ou o hábito de apertar os dentes. Tratar só o sintoma não resolve: é preciso encontrar a origem.',
+    p: [['Conversa', 'Entender seus hábitos, alimentação e quando a sensibilidade aparece.'], ['Exame', 'Avaliação do desgaste e das áreas sensíveis.'], ['Proteção', 'Tratamento para reduzir a sensibilidade e proteger os dentes.'], ['Acompanhamento', 'Revisões para garantir que o desgaste não avance.']] },
+  { id: 'protese', t: 'Próteses', r: 'Coroas e próteses para reconstruir dentes muito destruídos ou repor os que faltam.',
+    i: 'Quando o dente perdeu muita estrutura, a coroa protege o que restou e devolve forma e função. Quando o dente já não está lá, a prótese devolve a mastigação, a fala e a confiança para sorrir. Cada caso tem sua indicação, definida depois de uma avaliação cuidadosa.',
+    p: [['Avaliação', 'Exame clínico e, quando necessário, exames de imagem.'], ['Planejamento', 'Escolha do tipo de coroa ou prótese mais indicado para o seu caso.'], ['Confecção', 'Preparo, moldagem e provas, com um provisório enquanto a peça definitiva é feita.'], ['Instalação e ajustes', 'Ajustes finos da mordida e retornos para o seu conforto.']] },
+  { id: 'bruxismo', t: 'Bruxismo e dor na articulação', r: 'Aperta os dentes, acorda com o rosto dolorido ou a mandíbula estala? Investigamos a causa.',
+    i: 'Ranger ou apertar os dentes, dor na mandíbula, estalos e dor de cabeça ao acordar raramente têm uma causa só: estresse, sono, postura e mordida podem estar envolvidos. Por isso o cuidado não para no alívio do sintoma. Ele busca entender o que está por trás e, quando o caso pede, conta com outros profissionais, como médicos, fisioterapeutas e psicólogos.',
+    p: [['Anamnese detalhada', 'Uma conversa aprofundada sobre sua rotina, seu sono, seu estresse e o momento em que a dor aparece. É ela que aponta as causas.'], ['Exame', 'Avaliação dos músculos da face, da articulação, da mordida e do desgaste dos dentes.'], ['Alívio dos sintomas', 'Medidas para reduzir a dor e proteger os dentes, como a placa, quando indicada.'], ['Cuidado com a causa', 'Acompanhamento ao longo do tempo e, quando necessário, trabalho em conjunto com outros profissionais da saúde.']] },
+  { id: 'urgencia', t: 'Dor e urgência', r: 'Atendimento para aliviar a dor e investigar a causa, conforme a agenda.',
+    i: 'Dor de dente não precisa esperar. O primeiro objetivo é aliviar o desconforto; depois, entender a causa e planejar o tratamento definitivo.',
+    p: [['Contato', 'Você chama pelo WhatsApp e combinamos o horário mais próximo possível.'], ['Alívio', 'Atendimento para controlar a dor.'], ['Diagnóstico', 'Investigação da causa do problema.'], ['Plano', 'Orientação sobre o tratamento definitivo.']] }
+];
+var cards = document.getElementById('cards'), area = document.getElementById('area'), det = document.getElementById('detalhe');
+cards.innerHTML = TRAT.map(function (x) {
+  return '<button class="card" data-id="' + x.id + '"><h3>' + x.t + '</h3><p>' + x.r + '</p><span class="saiba">Saiba mais →</span><span class="voltar-card">← Voltar</span></button>';
+}).join('');
+// A tela fica parada onde a pessoa clicou: guardamos a posição antes de trocar o conteúdo e voltamos a ela depois.
+function semPular(fn) { var y = window.scrollY; fn(); window.scrollTo(0, y); }
+function abrir(id, rolar) {
+  var x = TRAT.filter(function (y) { return y.id === id; })[0]; if (!x) return;
+  cards.querySelectorAll('.card').forEach(function (c) { c.classList.toggle('ativo', c.dataset.id === id); });
+  det.innerHTML = '<h3>' + x.t + '</h3><p class="intro">' + x.i + '</p><ol>' +
+    x.p.map(function (s) { return '<li><div><b>' + s[0] + '</b><span>' + s[1] + '</span></div></li>'; }).join('') +
+    '</ol><div class="acoes"><a class="btn-escuro" target="_blank" rel="noopener" href="' + linkWhats('Olá, Dr. Pedro! Vim pelo site e gostaria de saber mais sobre: ' + x.t + '.') + '">Agendar avaliação</a><button class="voltar" id="voltar">← Ver todos os tratamentos</button></div>';
+  area.classList.add('aberto');
+  document.getElementById('voltar').onclick = function () { fechar(); irParaTodos(); };
+  // só rola quando o clique veio de fora (links dos blocos escuros lá em cima)
+  if (rolar) document.getElementById('tratamentos').scrollIntoView({ behavior: 'smooth' });
+}
+function fechar() { area.classList.remove('aberto'); cards.querySelectorAll('.card').forEach(function (c) { c.classList.remove('ativo'); }); }
+// Ao voltar, a primeira fileira de cards encosta logo abaixo da barra do topo, para aparecerem todos os cards (como no print do Pedro).
+function irParaTodos() {
+  var topo = document.querySelector('.topo').offsetHeight;
+  var y = cards.getBoundingClientRect().top + window.scrollY - topo - 2;
+  window.scrollTo({ top: y, behavior: 'smooth' });
+}
+cards.addEventListener('click', function (e) { var c = e.target.closest('.card'); if (!c) return; c.blur(); if (c.classList.contains('ativo')) { fechar(); irParaTodos(); } else semPular(function () { abrir(c.dataset.id); }); });
+document.querySelectorAll('[data-abre]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); abrir(a.dataset.abre, true); }); });
+</script>
+</body>
+</html>
